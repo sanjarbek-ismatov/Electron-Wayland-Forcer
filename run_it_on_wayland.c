@@ -12,7 +12,7 @@ int main(int argc, char* argv[]){
 		strcat(all_arg, argv[i]);
 	}
 	char run_flags[] = "--ozone-platform-hint=auto";
-	char chromium_flags[] = "--enable-features=VaapiVideoDecoder,VaapiIgnoreDriverChecks,Vulkan,DefaultANGLEVulkan,VulkanFromANGLE,AcceleratedVideoEncoder,TouchpadOverscrollHistoryNavigation";
+	char chromium_flags[] = "--enable-features=VaapiVideoDecoder,CanvasOopRasterization,VaapiIgnoreDriverChecks,VaapiVideoEncoder,Vulkan,DefaultANGLEVulkan,VulkanFromANGLE,TouchpadOverscrollHistoryNavigation";
 	char run[256];
 	if(strcmp(argv[1], "microsoft-edge") == 0){
 		sprintf(run, "%s %s %s", all_arg, run_flags, chromium_flags);
