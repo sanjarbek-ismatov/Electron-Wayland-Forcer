@@ -12,9 +12,11 @@ int main(int argc, char* argv[]){
 		strcat(all_arg, argv[i]);
 	}
 	char run_flags[] = "--ozone-platform-hint=auto";
-	char chromium_flags[] = "--enable-features=VaapiVideoDecoder,CanvasOopRasterization,VaapiIgnoreDriverChecks,VaapiVideoEncoder,TouchpadOverscrollHistoryNavigation,Vulkan,DefaultANGLEVulkan,VulkanFromANGLE";
+	char chromium_flags[] = "--enable-features=TouchpadOverscrollHistoryNavigation";
+	// Vulkan flags: Vulkan,DefaultANGLEVulkan,VulkanFromANGLE
 	char run[256];
-	if(strcmp(argv[1], "microsoft-edge") == 0){
+	char* program = argv[1];
+	if(strcmp(program, "brave-browser") == 0 || strcmp(program, "google-chrome") == 0){
 		sprintf(run, "%s %s %s", all_arg, run_flags, chromium_flags);
 		system(run);
 	} else{
