@@ -16,7 +16,7 @@ int main(int argc, char* argv[]){
 		strcat(all_arg, argv[i]);
 	}
 	char run_flags[] = "--ozone-platform-hint=auto";
-	char chromium_flags[] = "--enable-features=TouchpadOverscrollHistoryNavigation";
+	char chromium_flags[] = "--enable-features=VaapiVideoDecoder,VaapiIgnoreDriverChecks,Vulkan,DefaultANGLEVulkan,VulkanFromANGLE,TouchpadOverscrollHistoryNavigation";
 	// Vulkan flags: Vulkan,DefaultANGLEVulkan,VulkanFromANGLE
 	char run[256];
 	if(is_chromium){
